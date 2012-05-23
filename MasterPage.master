@@ -1,0 +1,75 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+
+<div class="background">
+   <asp:menu id="NavigationMenu" CssClass="NavigationMenu"  
+        staticdisplaylevels="2" DynamicHorizontalOffset="1"
+        staticsubmenuindent="1px" MaximumDynamicDisplayLevels="4"
+        orientation="Horizontal"   
+        DynamicPopOutImageUrl="~/Images/right-arrow.gif" 
+        StaticPopOutImageUrl="~/Images/drop-arrow.gif"
+        datasourceid="MenuSource"    
+        runat="server" Height="30px">
+
+        <staticmenuitemstyle ItemSpacing="10" CssClass="staticMenuItemStyle"/>
+        <statichoverstyle CssClass="staticHoverStyle" />
+        <StaticSelectedStyle CssClass="staticMenuItemSelectedStyle"/> 
+        <DynamicMenuItemStyle CssClass="dynamicMenuItemStyle" />      
+        <dynamichoverstyle CssClass="menuItemMouseOver" />
+        <DynamicMenuStyle CssClass="menuItem" />
+        <DynamicSelectedStyle CssClass="menuItemSelected" />
+     
+        <DataBindings>        
+             <asp:MenuItemBinding DataMember="siteMapNode" 
+                NavigateUrlField="url" TextField="title"  
+                    ToolTipField="description" />
+        </DataBindings>
+
+      </asp:menu>
+    </div>
+
+    <asp:TreeView ID="NavigationTreeView" runat="server" Visible="false" DataSourceID="MenuSource" />
+
+<div id="e">
+        <asp:SiteMapPath ID="SiteMapPath1" runat="server" 
+                RenderCurrentNodeAsLink="true" 
+                CssClass="currentNodeStyle"
+            PathSeparator=" >> ">
+            <PathSeparatorStyle ForeColor="#5D7B9D" CssClass="currentNodeStyle" />
+            <CurrentNodeStyle ForeColor="#333333" CssClass="currentNodeStyle" />
+            <NodeStyle ForeColor="#7C6F57"  CssClass="currentNodeStyle"  />
+            <RootNodeStyle  ForeColor="#5D7B9D" CssClass="currentNodeStyle"  />
+    </asp:SiteMapPath> 
+</div>    
+
+    <asp:Panel ID="AccessKeyPanel" runat="server">
+    </asp:Panel>
+       <asp:SiteMapDataSource id="MenuSource" runat="server" StartFromCurrentNode="false" ShowStartingNode="true" />
+        
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+
+    </form>
+    
+<script type="text/javascript">
+ 
+ function navigateTo(url) {
+    window.location = url;
+ }
+
+</script>
+    
+</body>
+</html>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  
+  <siteMapNode>
+      <siteMapNode url="Default.aspx" title="&lt;u>H&lt;/u>ome" description="Home" accesskey="H" />
+      <siteMapNode url="~/Views/Menu1.aspx" title="&lt;u>M&lt;/u>enu1"  
+                   description="Menu1" accesskey="M" />
+        <siteMapNode url="~/Views/Menu2.aspx" title="M&lt;u>e&lt;/u>nu2" 
+                     description="Menu2" accesskey="E" />
+    
+    <siteMapNode url="~/Views/Menu3.aspx" title="Me&lt;u>n&lt;/u>u3" 
+                 description="Menu3" accesskey="N" target="_blank" />
+        
+    <siteMapNode url="~/Views/Menu4.aspx" title="Men&lt;u>u&lt;/u>4" 
+                 description="Menu4" accesskey="U">
+      <siteMapNode url="~/Views/Menu4Sub1.aspx" title="Menu4&lt;u>S&lt;/u>ub1" 
+                   description="Menu4Sub1" 
+                   accesskey="S" />
+      <siteMapNode url="~/Views/Menu4Sub2.aspx" title="Menu4Su&lt;u>b&lt;/u>2" 
+                   description="Menu4Sub2" 
+                   target="_blank" accesskey="B" />
+    </siteMapNode>
+
+    <siteMapNode url="~/Views/Menu5.aspx" title="Menu5&lt;u>A&lt;/u>" description="Menu5" accesskey="A">
+      <siteMapNode url="~/Views/Menu5Sub1.aspx" title="Menu4sub1&lt;u>C&lt;/u>" description="Menu5Sub1" 
+                   accesskey="C" />
+        <siteMapNode url="~/Views/Menu5Sub2.aspx" title="Menu4Sub2&lt;u>D&lt;/u>"  description="Menu5Sub2" 
+                     accesskey="D">
+          <siteMapNode url="~/Views/Menu5SubSub1.aspx" title="Menu5SubSub1&lt;u>T&lt;/u>" 
+                       description="Menu5SubSub1" accesskey="T">
+            <siteMapNode url="~/Views/Menu5SubSubSub1.aspx" title="An&lt;u>o&lt;/u>therSub"  
+                         description="AnotherSub" accesskey="O" />
+          </siteMapNode>
+        </siteMapNode>
+    </siteMapNode>
+    
+  </siteMapNode>
+</siteMap>
